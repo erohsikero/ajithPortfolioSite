@@ -278,6 +278,30 @@
     background: rgba(0,255,229,0.05);
     border-color: var(--accent);
   }
+  .btn-resume {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    padding: 12px 22px;
+    background: transparent;
+    color: var(--text2);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-resume svg { width: 14px; height: 14px; flex-shrink: 0; transition: transform 0.2s; }
+  .btn-resume:hover {
+    color: var(--green);
+    border-color: var(--green);
+    background: rgba(0,255,136,0.05);
+    box-shadow: 0 0 20px rgba(0,255,136,0.1);
+  }
+  .btn-resume:hover svg { transform: translateY(2px); }
 
   .hero-stats {
     position: absolute;
@@ -834,7 +858,7 @@
   @media (max-width: 768px) {
     body { cursor: auto; }
     #cursor-dot, #cursor-ring { display: none; }
-    .btn-primary, .btn-secondary { cursor: pointer; }
+    .btn-primary, .btn-secondary, .btn-resume { cursor: pointer; }
 
     nav { padding: 0 1.25rem; height: 56px; }
     .nav-links { display: none; }
@@ -853,7 +877,8 @@
     .hero-badges { gap: 8px; margin-bottom: 2rem; }
     .badge { font-size: 10px; padding: 5px 10px; }
     .hero-cta { flex-direction: column; gap: 12px; }
-    .btn-primary, .btn-secondary { text-align: center; padding: 14px 24px; font-size: 11px; }
+    .btn-primary, .btn-secondary, .btn-resume { text-align: center; padding: 14px 24px; font-size: 11px; }
+    .btn-resume { justify-content: center; }
     .scroll-indicator { left: 1.5rem; }
 
     section { padding: 3.5rem 1.5rem; }
@@ -1062,6 +1087,13 @@
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">INITIATE_CONTACT</a>
       <a href="#experience" class="btn-secondary">VIEW_INTEL</a>
+      <a href="Ajith_Kumar.pdf" target="_blank" class="btn-resume" download="Ajith_Kumar_Resume.pdf">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1v9M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        RESUME.PDF
+      </a>
     </div>
   </div>
 
